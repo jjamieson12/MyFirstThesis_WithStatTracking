@@ -1,6 +1,6 @@
 # <div align="center">Thesis template for an experimental particle physics PhD with in-built progress tracking</div> #
 
-This workflow is based heavily on the excellent hepthesis template, written and maintained by Andy Buckley, thanks go to him for providing them freely. 
+This workflow is based heavily on the excellent hepthesis template, written and maintained by Andy Buckley, thanks go to him for providing it freely. 
 
 hepthesis is avaliable in all good LaTeX distributions, and on [CTAN](https://ctan.org/pkg/hepthesis?lang=en), packaged with a similar working example.
 
@@ -24,7 +24,7 @@ NB: New thesis chapters must be placed inside directories named 'Section_\<chapt
 
 NB2: If you would like to track the amount of non-final red-text over time you need to use the \col{words go here} macro. This will colour 'words go here' in red and tell texcount to record this seperately from regular text
 
-When you have staged changes to commit -do not use git commit!- Instead run 
+When you have staged changes to commit **do not use git commit!** Instead run 
 ```bash
 bash commit.sh "commit message" x
 ```
@@ -41,4 +41,6 @@ This script will then, in this order:
 - Run git commit using your input commit message
 - Remind you to run git push and exit gracefully
 
-Final plots can be viewed by pointing a web browser to index&#46;html inside stats/figures/
+Final plots can be viewed by pointing a web browser to index&#46;html inside stats/figures/ 
+
+You can check [here](https://jjamieson12.github.io/MyFirstThesis_WithStatTracking/) for an in-progress look at these plots for my own thesis, here's hoping they make me look good. 
