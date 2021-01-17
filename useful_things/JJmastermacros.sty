@@ -1,0 +1,190 @@
+% A collection of all of the most useful and not-so-useful LaTeX macros I've found/written over the course of my PhD
+
+%Imports that are required/useful (you should probably put these in a preamble file though)
+\usepackage{float} % Required for specifying the exact location of a figure or table
+\usepackage{amsmath}
+\usepackage{eurosym}
+\usepackage{listings}
+
+%JJ's Thesis-ready stuff
+\newcommand*{\bi}{\begin{itemize}} %Itemize is so fiddly to type
+\newcommand*{\ei}{\end{itemize}}
+\newcommand*{\ritem}{\item[\rarrow]}
+\newcommand*{\bc}{\begin{center}} %as is centre
+\newcommand*{\ec}{\end{center}}
+\newcommand*{\be}{\begin{equation}} %and equation
+\newcommand*{\ee}{\end{equation}}
+\newcommand*{\dash}{\kern0.02cm\nobreakdash-} % - central dash
+\newcommand*{\rodash}{\kern 0.2ex -} %Right offset dash
+\newcommand*{\lodash}{-\kern 0.2ex } %Left offset dash
+\newcommand*{\roughly}{\ensuremath{\sim}} % ~ cos who can ever remember it's \sim
+\newcommand*{\tableHSpace}[1]{\setlength{\tabcolsep}{#1}} %For nice table formatting, Usage: tableHSpace{value} before 
+\newcommand*{\tableVSpace}[1]{\renewcommand{\arraystretch}{#1}}
+
+%HEP specific
+\newcommand*{\Deltaphi}{$\Delta{\phi}$\xspace} %Dphi
+\newcommand*{\Deltaphipi}{$\frac{\Delta{\phi}}{\pi}$\xspace} %Dphi/pi
+\newcommand*{\wdecay}{$W$\kern-0.45ex -decay} %W-decay
+\newcommand*{\wboson}{$W$\kern-0.3ex -boson} %W-boson
+\newcommand*{\mtop}{m$_{\textnormal{top}}$\xspace} %m_top
+\newcommand*{\mtopjet}{m$_{\textnormal{topjet}}$\xspace} %m_topjet
+\newcommand*{\zmumu}{\ensuremath{Z\rightarrow\mu^{+}\mu^{-}}\xspace} %Z->MuMu
+\newcommand*{\ljets}{\ensuremath{\ell+\textnormal{Jets}}\xspace} % l + Jets
+\newcommand*{\lpt}{\ensuremath{\hat{t}_{\ell}}\xspace} % leptonic pseudo-top
+\newcommand*{\hpt}{\ensuremath{\hat{t}_{h}}\xspace} % hadronic pseudo-top
+\newcommand*{\etmiss}{\ensuremath{E^{\textnormal{miss}}_{T}}\xspace} % Etmiss
+\newcommand*{\HLTtap}{HLT\underline{{ }{ }}mu22\underline{{ }{ }}mu8noL1\underline{{ }{ }}TagandProbe\xspace} %TaP trigger name
+\newcommand*{\frtwo}{$139\textnormal{ fb}^{-1}$\xspace} % full run 2
+\newcommand*{\ISR}{\textsc{isr}}%\xspace}
+\newcommand*{\FSR}{\textsc{fsr}}%\xspace}
+\newcommand*{\JSF}{\textsc{jsf}\xspace}
+\newcommand*{\NDF}{\textsc{ndf}\xspace}
+\newcommand*{\JSFdata}{\textsc{jsf}$_{data}$\xspace}
+\newcommand*{\JSFsyst}{\textsc{jsf}$_{syst}$\xspace}
+\newcommand*{\JSFdatastat}{\textsc{jsf}$_{data\text{-}stat}$\xspace}
+\newcommand*{\jvt}{\textsc{jvt}\xspace}
+\newcommand*{\nominal}{\textsc{Powheg}$+$\textsc{Pythia}8\xspace}
+\newcommand*{\mcatnlo}{\textsc{mc}{\footnotesize @}\textsc{nlo}}%\xspace}
+\newcommand*{\mcatnloX}{\textsc{mc}{\footnotesize @}\textsc{nlo}\xspace}
+\newcommand*{\phseven}{\textsc{Powheg}$+$\textsc{Herwig7}\xspace}
+\newcommand*{\AF}{\textsc{AFII}\xspace}
+\newcommand*{\MC}{\textsc{mc}\xspace}
+\newcommand*{\RC}{\textsc{rc}\xspace}
+\newcommand*{\Rratio}[2]{$R\kern0.15ex^{#1}_{#2}$\xspace}
+\newcommand*{\GeVx}{\GeV\xspace} %text-mode friendly GeV
+\newcommand*{\TeVx}{\TeV\xspace} %text-mode friendly TeV
+\newcommand*{\MeVx}{\MeV\xspace} %text-mode friendly MeV
+\newcommand*{\keVx}{\keV\xspace} %text-mode friendly keV
+\newcommand*{\eVx}{\eV\xspace} %text-mode friendly eV
+\DeclareRobustCommand{\ATLAS}{ATLAS\xspace}
+
+%Table and figure formatting
+\newcommand*{\tableHSpace}[1]{\setlength{\tabcolsep}{#1}}
+\newcommand*{\tableVSpace}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand*{\bt}[1]{\begin{table}[#1]} %tbh table isn't that fiddly but I'm on a roll here
+\newcommand*{\et}{\end{table}} 
+\newcommand*{\bfig}[1]{\begin{figure}[#1]}  %stupid bold font
+\newcommand*{\efig}{\end{figure}} 
+
+\newcommand*{\col}[2][red]{\textcolor{#1}{#2}} % Insert coloured text, default red, use like \col{text that I want to be red and tracked}
+
+%Magic code to Tell TexCount to track red text separately (Don't uncomment, must be placed inside something read by texcount)
+%TC:newcounter RedText Problem Text
+%TC:macro \col [RedText]
+
+%Example of how to tell TexCount to correctly account for macros
+%TC:macroword \ATLAS 1
+%TC:macroword \ttbar 1
+%TC:macroword \LHCb 1
+%TC:macroword \LHC 1
+%TC:macroword \LEP 1
+%TC:macroword \CERN 1
+%TC:macroword \frtwo 3
+
+
+%JJ's Not-so professional stuff
+
+%Add a dated signature, Usage = \signed{name} 
+\NewDocumentCommand{\signed}{ O{\today} m }{
+\hfill \roughly #2\\
+\vspace{-0.5cm}
+\hfill #1
+}
+
+\newcommand{\blank}{\phantom{A}\\} %Makes a blank space (surprisingly useful)
+
+definecolor{tickgreen}{RGB}{13,150,11} %Colours for ticks and sadness
+\definecolor{sadblue}{RGB}{40,120,255}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} %\checkmark for lists
+\def\tick{\tikz\fill[scale=0.4,color=tickgreen](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} %\tick for lists
+\def\semitick{\tikz\fill[scale=0.4,color=tickgreen](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;\col[tickgreen]{ish}} %Partial tick
+\newcommand{\cross}{$\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex, red] \draw (0,0) -- (1,1) (0,1) -- (1,0);}$} %\cross for pretending to be a pirate
+
+\def\£{\pounds} %punds
+\NewDocumentCommand{\bold}{ m }{\textbf{#1}}
+\NewDocumentCommand{\ital}{ m }{\textit{#1}}
+\newcommand{\slashface}{\cChangey[1.5]{-0.5}\xspace} % :/ face 
+\newcommand{\sadface}{\cChangey[1.5][sadblue]{-1.5}\xspace} % :( face
+\newcommand{\happyface}{\cChangey[1.5]{2}\xspace} % :) face
+
+\NewDocumentCommand{\jjbox}{ O{white} O{1} m }{ % Put text in a box /jjbox[colour][length]{text} or \jjbox{text} for defaults
+\fcolorbox{black}{#1}{\begin {minipage}{#2\textwidth}
+\begin{center}
+#3
+\end{center}
+\end {minipage}}
+}
+
+\NewDocumentCommand{\pic}{ O{1} O{white} m }{ % Put figures in a box /jjbox[width][colour]{path}
+\fcolorbox{black}{#2}{\begin {minipage}{#1\textwidth}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{#3}
+\end{center}
+\end {figure}
+\end{minipage}
+} %colorbox
+} %command
+
+\NewDocumentCommand{\rotpic}{ O{1} O{white} O{-90} m }{ % Put figures in a rotatey box /jjbox[width][colour][rotation]{path}
+\fcolorbox{black}{#2}{\begin {minipage}{#1\textwidth}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1.25\linewidth,angle=#3]{#4}
+\end{center}
+\end {figure}
+\end{minipage}
+} %colorbox
+} %command
+
+%Colours for typesetting code
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{rgb}{0.6,0,0}
+\definecolor{codegrey}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.273,0.104,0.245}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codered},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegrey},
+    stringstyle=\color{red},
+    morecomment=[l][\color{codepurple}]{\#}
+    basicstyle=\color{white},
+    columns=fullflexible
+    breakatwhitespace=false,         
+    extendedchars=true
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+%Insert code snippets, run like: \bash \n multi-line code snippet \n \end{lstlisting} [I've not found a way to get \end{lstlisting} to work in a macro yet
+\lstset{style=mystyle}
+\def\bash{\begin{lstlisting}[basicstyle=\ttfamily\color{white},language=bash, breaklines=true, postbreak=\mbox{\textcolor{green}{$\hookrightarrow$}\space}]}  %bash snippet
+\def\cxx{\begin{lstlisting}[basicstyle=\ttfamily\color{white},language=C++, breaklines=true, numbers=left]} %c++ snippet
+\def\python{\begin{lstlisting}[basicstyle=\ttfamily\color{white},language=Python, breaklines=true,  numbers=left]} %python snippet
+
+
+%Andy's stuff
+\DeclareRobustCommand{\Rate}{\mymath{\Gamma}\xspace}
+\DeclareRobustCommand{\RateOf}[1]{\mymath{\Gamma}\parenths{#1}\xspace}
+\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
+
+
+% Fix for hepnames in TexLive2020
+%\makeatletter
+%\xpatchcmd\@HepConStyle
+% {\edef\@upcode{\updefault}}
+% {\ifdefined\shapedefault\edef\@upcode{\shapedefault}\else\edef\@upcode{\updefault}\fi}
+% {}{}
+%\makeatother

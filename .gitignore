@@ -1,0 +1,17 @@
+source
+.DS_Store
+*/__pycache__
+*/.ipynb_checkpoints
+*~
+*.toc
+*.aux
+*.log
+*.blg
+*.out
+*.bbl
+*.brf
+*.idx
+*JJthesis*.pdf
+Section*/*.pdf
+Section*/*.synctex*
+Bibliography/*.pdf

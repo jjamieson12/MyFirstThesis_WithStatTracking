@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+</style>
+
+<body>
+  <h2 style="text-align: center; background: #900174; color: #ffffff; padding: 1px;">Cumulative (by commit)</h1>
+  <a href="example_w_by_commit.png"><img src="example_w_by_commit_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_n_by_commit.png"><img src="example_n_by_commit_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_p_by_commit.png"><img src="example_p_by_commit_thumb.png" style="width:100% height:auto"></a><br>
+    <h2 style="text-align: center; background: #900174; color: #ffffff; padding: 1px;">Cumulative (by day)</h1>
+  <a href="example_w_by_day.png"><img src="example_w_by_day_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_n_by_day.png"><img src="example_n_by_day_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_p_by_day.png"><img src="example_p_by_day_thumb.png" style="width:100% height:auto"></a><br>
+  <h2 style="text-align: center; background: #900174; color: #ffffff; padding: 1px;">Relative Change (per commit)</h1>
+  <a href="example_w_per_commit.png"><img src="example_w_per_commit_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_n_per_commit.png"><img src="example_n_per_commit_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_p_per_commit.png"><img src="example_p_per_commit_thumb.png" style="width:100% height:auto"></a><br>
+  <h2 style="text-align: center; background: #900174; color: #ffffff; padding: 1px;">Writing Rate</h1>
+  <a href="example_r_per_commit.png"><img src="example_r_per_commit_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_r_by_day.png"><img src="example_r_by_day_thumb.png" style="width:100% height:auto"></a><br>
+  <h2 style="text-align: center; background: #900174; color: #ffffff; padding: 1px;">Special</h1>
+  <a href="example_s_by_day.png"><img src="example_s_by_day_thumb.png" style="width:100% height:auto"></a>
+  <a href="example_wordcloud.png"><img src="example_wordcloud_thumb.png" style="width:100% height:auto"></a>
+</body>
+</html>
+
+<script>
+  "use strict";
+  function sizeGood() {
+      //var percent = Math.floor((screen.availWidth/2.95)/5.77);
+      var percent = 33
+      var img = document.getElementsByTagName('img');
+      for(var i=0;i<img.length;i++) {
+	  img[i].style.width = percent + '%';
+	  img[i].style.height = 'auto';
+      }
+  }
+  sizeGood();
+</script>

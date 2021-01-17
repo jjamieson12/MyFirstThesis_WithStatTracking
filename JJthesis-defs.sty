@@ -1,0 +1,145 @@
+%JJ's stuff
+\newcommand*{\Deltaphi}{$\Delta{\phi}$\xspace} %Dphi
+\newcommand*{\Deltaphipi}{$\frac{\Delta{\phi}}{\pi}$\xspace} %Dphi/pi
+\newcommand*{\bi}{\begin{itemize}} %Itemize is so fiddly to type
+\newcommand*{\ei}{\end{itemize}}
+\newcommand*{\ritem}{\item[\rarrow]}
+\newcommand*{\bc}{\begin{center}} %as is centre
+\newcommand*{\ec}{\end{center}}
+\newcommand*{\ttbar}{$t\bar{t}$\xspace}
+\newcommand*{\wdecay}{$W$\kern-0.45ex -decay} %W-decay
+\newcommand*{\wboson}{$W$\kern-0.3ex -boson} %W-boson
+\newcommand*{\dash}{\kern0.02cm\nobreakdash-} % - 
+\newcommand*{\mtop}{m$_{\textnormal{top}}$\xspace} %m_top
+\newcommand*{\mtopjet}{m$_{\textnormal{topjet}}$\xspace} %m_topjet
+\newcommand*{\zmumu}{\ensuremath{Z\rightarrow\mu^{+}\mu^{-}}\xspace} %Z->MuMu
+\newcommand*{\ljets}{\ensuremath{\ell+\textnormal{Jets}}\xspace} % l + Jets
+\newcommand*{\lpt}{\ensuremath{\hat{t}_{\ell}}\xspace} % leptonic pseudo-top
+\newcommand*{\hpt}{\ensuremath{\hat{t}_{h}}\xspace} % hadronic pseudo-top
+\newcommand*{\etmiss}{\ensuremath{E^{\textnormal{miss}}_{T}}\xspace} % Etmiss
+\newcommand*{\roughly}{\ensuremath{\sim}} % ~
+\newcommand*{\col}[2][red]{\textcolor{#1}{#2}} % Insert coloured text
+\newcommand*{\HLTtap}{HLT\underline{{ }{ }}mu22\underline{{ }{ }}mu8noL1\underline{{ }{ }}TagandProbe\xspace} %TaP trigger name
+\newcommand*{\frtwo}{$139\textnormal{ fb}^{-1}$\xspace} % full run 2
+\newcommand*{\ISR}{\textsc{isr}}%\xspace}
+\newcommand*{\FSR}{\textsc{fsr}}%\xspace}
+\newcommand*{\JSF}{\textsc{jsf}\xspace}
+\newcommand*{\NDF}{\textsc{ndf}\xspace}
+\newcommand*{\JSFdata}{\textsc{jsf}$_{data}$\xspace}
+\newcommand*{\JSFsyst}{\textsc{jsf}$_{syst}$\xspace}
+\newcommand*{\JSFdatastat}{\textsc{jsf}$_{data\text{-}stat}$\xspace}
+\newcommand*{\jvt}{\textsc{jvt}\xspace}
+\newcommand*{\nominal}{\textsc{Powheg}$+$\textsc{Pythia}8\xspace}
+\newcommand*{\mcatnlo}{\textsc{mc}{\footnotesize @}\textsc{nlo}}%\xspace}
+\newcommand*{\mcatnloX}{\textsc{mc}{\footnotesize @}\textsc{nlo}\xspace}
+\newcommand*{\phseven}{\textsc{Powheg}$+$\textsc{Herwig7}\xspace}
+\newcommand*{\AF}{\textsc{AFII}\xspace}
+\newcommand*{\MC}{\textsc{mc}\xspace}
+\newcommand*{\RC}{\textsc{rc}\xspace}
+\newcommand*{\Rratio}[2]{$R\kern0.15ex^{#1}_{#2}$\xspace}
+\newcommand*{\GeVx}{\GeV\xspace} %text-mode friendly GeV
+\newcommand*{\TeVx}{\TeV\xspace} %text-mode friendly TeV
+\newcommand*{\MeVx}{\MeV\xspace} %text-mode friendly MeV
+\newcommand*{\keVx}{\keV\xspace} %text-mode friendly keV
+\newcommand*{\eVx}{\eV\xspace} %text-mode friendly eV
+
+\DeclareRobustCommand{\ATLAS}{ATLAS\xspace}
+
+\newcommand*{\tableHSpace}[1]{\setlength{\tabcolsep}{#1}}
+\newcommand*{\tableVSpace}[1]{\renewcommand{\arraystretch}{#1}}
+
+% PMG stuff (taken from document https://gitlab.cern.ch/atlas-physics/pmg/documents/references/-/blob/master/PMGRefs-defs.sty)
+\def\powheg{\textsc{Powheg}\xspace}
+\def\powhegbox{\textsc{PowhegBox}\xspace}
+\def\herwig{\textsc{Herwig}\xspace} 
+\def\herwigseven{\textsc{Herwig7}\xspace} 
+\def\pythia{\textsc{Pythia8}\xspace}
+\def\pythiasix{\textsc{Pythia6}\xspace}
+\def\sherpa{\textsc{Sherpa}\xspace} 
+\def\evtgen{\textsc{EvtGen}\xspace}
+\def\hathor{\textsc{Hathor}\xspace} 
+\def\mgamc{\textsc{MadGraph5}\_a\textsc{MC@NLO}\xspace}
+\def\madspin{\textsc{MadSpin}\xspace}
+\def\openloops{\textsc{OpenLoops}\,1\xspace}
+\def\openloopstwo{\textsc{OpenLoops}\,2\xspace}
+\def\sherpaopenloops{\textsc{Sherpa+OpenLoops}\xspace}
+
+\def\mur{\ensuremath{\mu_\mathrm{r}}\xspace}
+\def\muf{\ensuremath{\mu_\mathrm{f}}\xspace}
+\def\muq{\ensuremath{\mu_\mathrm{q}}\xspace}
+
+\def\cteq{\texttt{CTEQ6L1}\xspace}
+\def\ctten{\texttt{CT10}\xspace}
+\def\cttennlo{\texttt{CT10nlo}\xspace}
+\def\ctfourteennlo{\texttt{CT14nnlo}\xspace}
+\def\ctfourteennnlo{\texttt{CT14nnlo}\xspace}
+\def\nnpdfonenlo{\texttt{NNPDF3.1nlo}\xspace}
+\def\nnpdfnnlo{\texttt{NNPDF3.0nnlo}\xspace}
+\def\nnpdfnlo{\texttt{NNPDF3.0nlo}\xspace}
+\def\nnpdflo{\texttt{NNPDF3.0lo}\xspace}
+\def\nnpdftwo{\texttt{NNPDF2.3lo}\xspace}
+\def\nnpdftwonlo{\texttt{NNPDF2.3nlo}\xspace}
+\def\mstw{\texttt{MSTW2008nlo}\xspace}
+\def\mstwnnlo{\texttt{MSTW2008nnlo}\xspace}
+
+\def\ttV{\ensuremath{t\bar{t}V}\xspace}
+
+% Int-Note Variables
+\newcommand*{\pThad}{$p_{T}^{\textnormal{top}_{had}}$\xspace}
+\newcommand*{\pTlep}{$p_{T}^{\textnormal{top}_{lep}}$\xspace}
+\newcommand*{\pTttbar}{$p_{T}^{t\bar{t}_{}}$\xspace}
+\newcommand*{\HTfull}{$H_{T}^{t\bar{t}+\textnormal{jets}_{}}$\xspace}
+\newcommand*{\HTttbar}{$H_{T}^{t\bar{t}_{}}$\xspace}
+\newcommand*{\yhad}{$|y^{\textnormal{top}_{had}}|$\xspace}
+\newcommand*{\ylep}{$|y^{\textnormal{top}_{lep}}|$\xspace}
+\newcommand*{\yttbar}{$|y^{t\bar{t}_{}}|$\xspace}
+\newcommand*{\mttbar}{$m^{t\bar{t}_{}}$\xspace}
+\newcommand*{\Naddjets}{$\textnormal{N}^{\textnormal{extrajets}_{}}$\xspace}
+\newcommand*{\pTlead}{$p_{T}^{\textnormal{extra}_{1}}$\xspace}
+\newcommand*{\pTsublead}{$p_{T}^{\textnormal{extra}_{2}}$\xspace}
+\newcommand*{\dphileadhadtop}{$\frac{\Delta\phi}{\pi}(\textnormal{extra}_{1}\textnormal{,top}_{had})$\xspace}
+\newcommand*{\dphisubleadhadtop}{$\frac{\Delta\phi}{\pi}(\textnormal{extra}_{2}\textnormal{,top}_{had})$\xspace}
+\newcommand*{\dphilepbhadtop}{$\frac{\Delta\phi}{\pi}(b_{lep}\textnormal{,top}_{had})$\xspace}
+\newcommand*{\dphittbar}{$\frac{\Delta\phi}{\pi}(\textnormal{top}_{had}\textnormal{,top}_{lep})$\xspace}
+\newcommand*{\dphileadsublead}{$\frac{\Delta\phi}{\pi}(\textnormal{extra}_{1}\textnormal{,extra}_{2})$\xspace}
+\newcommand*{\mleadhadtop}{$m^{\textnormal{extra}_{1},\textnormal{top}_{had}}$\xspace}
+\newcommand*{\Rleadhadtop}{\Rratio{\textnormal{extra}_{1}}{\textnormal{top}_{had}}\xspace}
+\newcommand*{\Rsubleadhadtop}{\Rratio{\textnormal{extra}_{2}}{\textnormal{top}_{had}}\xspace}
+
+
+%Andy's stuff
+\DeclareRobustCommand{\Rate}{\mymath{\Gamma}\xspace}
+\DeclareRobustCommand{\RateOf}[1]{\mymath{\Gamma}\parenths{#1}\xspace}
+\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
+\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
+\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
+\DeclareRobustCommand{\CPv}{\CPviolation}
+\DeclareRobustCommand{\LHCb}{LHCb\xspace}
+\DeclareRobustCommand{\LHC}{LHC\xspace}
+\DeclareRobustCommand{\LEP}{LEP\xspace}
+\DeclareRobustCommand{\CERN}{CERN\xspace}
+\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
+\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
+\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
+\DeclareRobustCommand{\bbaryon}{\Pbottom-baryon\xspace}
+\DeclareRobustCommand{\Bdecay}{\PB-decay\xspace}
+\DeclareRobustCommand{\bdecay}{\Pbottom-decay\xspace}
+\DeclareRobustCommand{\BToKPi}{\HepProcess{ \PB \to \PK \Ppi }\xspace}
+\DeclareRobustCommand{\BToPiPi}{\HepProcess{ \PB \to \Ppi \Ppi }\xspace}
+\DeclareRobustCommand{\BToKK}{\HepProcess{ \PB \to \PK \PK }\xspace}
+\DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \Ppi }\xspace}
+\DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \Prho }\xspace}
+\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
+\DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
+\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\epluseminus}{\Ppositron\!\Pelectron\xspace}
+\DeclareRobustCommand{\protonproton}{\Pproton\APantiproton\xspace}
+
+% Fix for hepnames in TexLive2020
+%% \makeatletter
+%% \xpatchcmd\@HepConStyle
+%% {\edef\@upcode{\updefault}}
+%% {\ifdefined\shapedefault\edef\@upcode{\shapedefault}\else\edef\@upcode{\updefault}\fi}
+%% {}{}
+%% \makeatother

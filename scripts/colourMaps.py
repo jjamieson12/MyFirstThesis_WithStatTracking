@@ -1,0 +1,84 @@
+#Set up colour sets ------------------------------------
+COLSETS={}
+COLSETS["purple"]=[
+    "xkcd:plum",
+    "xkcd:purple",
+    "xkcd:lavender",
+    "xkcd:azure",
+    "xkcd:aquamarine",
+]
+COLSETS["gold"]=[
+    "xkcd:orange",
+    "xkcd:goldenrod",
+    "xkcd:wheat",
+    "xkcd:silver",
+    "xkcd:aquamarine",
+]
+COLSETS["JJpurple"]=[
+    "#3c1357",
+    "#62208d",
+    "#a83b8f",
+    "#e8638b",
+    "#f4aea3",
+]
+COLSETS["JJwarm"]=[
+    "#723c2c",
+    "#cf4f29",
+    "#e97e3c",
+    "#f4b355",
+    "#feea6f",
+]
+COLSETS["JJcool"]=[
+    "#161f64",
+    "#264992",
+    "#3984b6",
+    "#5bbad1",
+    "#00b899",
+]
+COLSETS["JJsunrise"]=[
+    "#355c7d",
+    "#6c5b7b",
+    "#c06c84",
+    "#f67280",
+    "#ffb6b9",
+]
+COLSETS["JJsunset"]=[
+    "#27296d",
+    "#5e63b6",
+    "#a393eb",
+    "#f5c7f7",
+    "#ffc4d0",
+]
+COLSETS["JJaquasalmon"]=[
+    "#3984b6",
+    #"#30e3ca",
+    "#61c0bf",
+    "#bbded6",
+    "#fae3d9",
+    "#ffb6b9",
+]
+COLSETS["JJvibrancy"]=[
+    "#3a0088",
+    "#930077",
+    "#e61c5d",
+    "#ffbd39",
+    "#efd510",
+    #"#ffd700",
+]
+COLSETS["JJrg"]=[
+    "r",
+    "g",
+]
+COLSETS["JJbo"]=[
+    "b",
+    "orange",
+]
+COLSETS["JJgrey"]=[
+    "black",
+    "xkcd:grey",
+]
+COLSETS["JJgold"]=[
+    "black",
+    "silver",
+    "xkcd:goldenrod",
+]

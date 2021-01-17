@@ -1,0 +1,130 @@
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{morefloats,subfig,afterpage}
+\usepackage{mathrsfs} % script font
+\usepackage{verbatim}
+\usepackage{cite}
+%\usepackage{float} #For demanding figure is placed exactly where specified using H 
+%\usepackage{multirow} #For multi-row tables 
+
+%% Using Babel allows other languages to be used and mixed-in easily
+%\usepackage[ngerman,english]{babel}
+\usepackage[english]{babel}
+\selectlanguage{english}
+
+\graphicspath{{\BASEPATH figures/}{\BASEPATH tables/}}
+
+%% High-energy physics stuff
+%\usepackage{abhep}
+\usepackage{hepnames}
+\usepackage{hepunits}
+
+% Definitely useful JJ macros
+\usepackage{\BASEPATH JJthesis-defs}
+
+%Tell TexCount to track red text seperately
+%TC:newcounter RedText Problem Text
+%TC:macro \col [RedText]
+
+%Tell TexCount how to correctly account for macros: \macro #Words
+%TC:macroword \ATLAS 1
+%TC:macroword \ttbar 1
+%TC:macroword \wdecay 2
+%TC:macroword \wboson 2
+%TC:macroword \mtop 1
+%TC:macroword \mtopjet 2
+%TC:macroword \zmumu 2
+%TC:macroword \ljets 2
+%TC:macroword \lpt 1
+%TC:macroword \hpt 1
+%TC:macroword \etmiss 1
+%TC:macroword \HLTtap 1
+%TC:macroword \frtwo 3
+%TC:macroword \ISR 1
+%TC:macroword \FSR 1
+%TC:macroword \JSF 1
+%TC:macroword \NDF 1
+%TC:macroword \JSFdata 1
+%TC:macroword \JSFsyst 1
+%TC:macroword \JSFdatastat 1
+%TC:macroword \jvt 1
+%TC:macroword \nominal 2
+%TC:macroword \mcatnlo 1
+%TC:macroword \mcatnloX 1
+%TC:macroword \phseven 2
+%TC:macroword \AF 1
+%TC:macroword \MC 1
+%TC:macroword \RC 1
+%TC:macroword \powheg 1
+%TC:macroword \powhegbox 1
+%TC:macroword \herwig 1
+%TC:macroword \herwigseven 1
+%TC:macroword \pythia 1
+%TC:macroword \pythiasix 1
+%TC:macroword \sherpa 1
+%TC:macroword \evtgen 1
+%TC:macroword \hathor 1
+%TC:macroword \mgamc 1
+%TC:macroword \madspin 1
+%TC:macroword \openloops 1
+%TC:macroword \openloopstwo 1
+%TC:macroword \sherpaopenloops 2
+%TC:macroword \mur 1
+%TC:macroword \muf 1
+%TC:macroword \muq 1
+%TC:macroword \ttV 1
+%TC:macroword \pThad 1
+%TC:macroword \pTlep 1
+%TC:macroword \pTttbar 1
+%TC:macroword \HTfull 1
+%TC:macroword \HTttbar 1
+%TC:macroword \yhad 1
+%TC:macroword \ylep 1
+%TC:macroword \yttbar 1
+%TC:macroword \mttbar 1
+%TC:macroword \Naddjets 1
+%TC:macroword \pTlead 1
+%TC:macroword \pTsublead 1
+%TC:macroword \dphileadhadtop 1
+%TC:macroword \dphisubleadhadtop 1
+%TC:macroword \dphilepbhadtop 1
+%TC:macroword \dphittbar 1
+%TC:macroword \dphileadsublead 1
+%TC:macroword \mleadhadtop 1
+%TC:macroword \Rleadhadtop 1
+%TC:macroword \Rsubleadhadtop 1
+%TC:macroword \arXivCode 1
+%TC:macroword \CP 1
+%TC:macroword \CPviolation 1
+%TC:macroword \LHCb 1
+%TC:macroword \LHC 1
+%TC:macroword \LEP 1
+%TC:macroword \CERN 1
+%TC:macroword \bphysics 1
+%TC:macroword \bhadron 1
+%TC:macroword \Bmeson 1
+%TC:macroword \bbaryon 1
+%TC:macroword \Bdecay 1
+%TC:macroword \bdecay 1
+
+
+
+% Potentially useful Andy macros
+% \DeclareRobustCommand{\parenths}[1]{\mymath{\left({#1}\right)}\xspace}
+% \DeclareRobustCommand{\braces}[1]{\mymath{\left\{{#1}\right\}}\xspace}
+% \DeclareRobustCommand{\angles}[1]{\mymath{\left\langle{#1}\right\rangle}\xspace}
+% \DeclareRobustCommand{\sqbracs}[1]{\mymath{\left[{#1}\right]}\xspace}
+% \DeclareRobustCommand{\mods}[1]{\mymath{\left\lvert{#1}\right\rvert}\xspace}
+% \DeclareRobustCommand{\modsq}[1]{\mymath{\mods{#1}^2}\xspace}
+% \DeclareRobustCommand{\dblmods}[1]{\mymath{\left\lVert{#1}\right\rVert}\xspace}
+% \DeclareRobustCommand{\expOf}[1]{\mymath{\exp{\!\parenths{#1}}}\xspace}
+% \DeclareRobustCommand{\eexp}[1]{\mymath{e^{#1}}\xspace}
+% \DeclareRobustCommand{\plusquad}{\mymath{\oplus}\xspace}
+% \DeclareRobustCommand{\logOf}[1]{\mymath{\log\!\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\lnOf}[1]{\mymath{\ln\!\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\ofOrder}[1]{\mymath{\mathcal{O}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\SOgroup}[1]{\mymath{\mathup{SO}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\SUgroup}[1]{\mymath{\mathup{SU}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\Ugroup}[1]{\mymath{\mathup{U}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\I}[1]{\mymath{\mathrm{i}}\xspace}
+% \DeclareRobustCommand{\colvector}[1]{\mymath{\begin{pmatrix}#1\end{pmatrix}}\xspace}

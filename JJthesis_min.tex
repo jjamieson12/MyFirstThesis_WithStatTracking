@@ -1,0 +1,56 @@
+%Copy of JJthesis.tex tweaked to produce a minimal, content-only, output
+%run 'make content' (or 'make qcontent' for quiet output) far thesis draft without front/back matter and other excess guff
+
+\documentclass[hyperpdf,nobind,oneside]{hepthesis}
+
+\usepackage{mathpazo}
+
+\newcommand*{\BASEPATH}{./}
+
+%% Put package includes etc. into preamble.tex for convenience
+\input{preamble}
+
+
+%% Define the thesis title and author
+\title{JJ's Tittybar Adventure}
+\author{Jonathan Jamieson}
+
+%% Doc-specific PDF metadata
+\makeatletter
+\@ifpackageloaded{hyperref}{%
+\hypersetup{%
+  pdftitle = {ttbar differential cross section with ATLAS},
+  pdfsubject = {Jonathan Jamieson's PhD thesis},
+  pdfkeywords = {ATLAS, Top, physics, LHC, Boosted, Cross-Section},
+  pdfauthor = {\textcopyright\ Jonathan Jamieson}
+}}{}
+\makeatother
+
+
+%% Start the document
+\begin{document}
+
+\titlepage[\hspace{1cm}]{
+  A dissertation submitted to the University of Glasgow\\ for the degree of Doctor of Philosophy
+}
+%% Abstract                                                                                                                                                                         
+\begin{abstract}
+  \ATLAS is a general purpose detector experiment located at the \LHC accelerator at \CERN which has taken data up to an energy of \unit{13}{\TeV} from 2007 to 2018\dots
+\end{abstract}
+
+%% Start the content body of the thesis
+\begin{mainmatter}
+  %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
+  \input{Section_Introduction/Introduction}
+  \input{Section_Detector/Detector}
+  %% To ignore a specific chapter while working on another, making the build faster, comment it out:
+  %\input{chap4}
+\end{mainmatter}
+
+%% Produce the appendices
+\begin{appendices}
+  \input{appendices}
+\end{appendices}
+
+%% Close
+\end{document}

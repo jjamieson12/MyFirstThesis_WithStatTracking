@@ -1,0 +1,26 @@
+{
+    "commit":
+    [
+	{
+	    "id": 0,
+	    "message": "This is a template",
+	    "date": "17_01_2020",
+	    "epoch_time": 1610882192,
+	    "epoch_days": 18644,
+	    "sentiment": 5,
+	    "w_text": 0,
+	    "w_header": 0,
+	    "w_caption": 0,
+	    "w_redtext": 0,
+	    "w_total": 0,
+	    "w_total_noapp": 0,
+	    "n_headers": 0,
+	    "n_figures": 0,
+	    "n_inlines": 0,
+	    "n_equations": 0,
+	    "n_chapters": 0,
+	    "n_page_content": 0,
+	    "n_page_total": 0
+	}
+    ]
+}
