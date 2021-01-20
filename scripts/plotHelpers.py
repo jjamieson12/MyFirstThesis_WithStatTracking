@@ -110,7 +110,10 @@ def make_graph_by_commit(ax,yslices_uns,ylabels_uns,xslice,
     if logy: ax.set_yscale("log")     
     ax.set_title(title,fontsize=18)
     ax.set_xlabel("Commit number",fontsize=18,labelpad=13)
-    ax.set_xticks(xslice.iloc[1:]+0.5)
+    if percommit:
+        ax.set_xticks(xslice.iloc[1:]+(0.5*(1-xoffset)))
+    else:
+        ax.set_xticks(xslice.iloc[1:]+0.5)
     ax.set_xticklabels(xslice.iloc[1:],fontsize=16,rotation=270)
     ax.set_ylabel(trackable,fontsize=18,rotation=0,labelpad=40)
     ax.tick_params(axis='y', which='major', labelsize=16)
@@ -133,7 +136,10 @@ def make_graph_by_commit(ax,yslices_uns,ylabels_uns,xslice,
             add_annotation(ax,redtext[1],redtext[0],"red",offset=1,total=slicetot,logy=logy)
 
     else:
-        ax.set_xlim([xslice.iloc[1],(xslice.iloc[-1])]) #Fill x-axis
+        if percommit:
+            ax.set_xlim([xslice.iloc[1],(xslice.iloc[-1]+1)]) #Fill x-axis
+        else:
+            ax.set_xlim([xslice.iloc[1],(xslice.iloc[-1])]) #Fill x-axis
 
             
     return None
