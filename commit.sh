@@ -30,7 +30,7 @@ countpages()
 }
 
 outstanding_changes=$(git status | grep "Changes not staged for commit" | wc -l)
-if [[ ! ${outstanding_changes} == 0 ]]; then 
+if (( ${outstanding_changes} != 0 )); then 
     echo "Caution there are changes in the working repo that haven't been staged:\n $(git status | grep -A 1000 "Changes not staged for commit")"
     echo "Are you sure you want to commit anyway?"
     read -p '[y/n]: ' cont
